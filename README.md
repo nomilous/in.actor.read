@@ -1,6 +1,6 @@
 # in.actor.read
 
-File reader for in.
+File reader for [in.](https://github.com/nomilous/in.)
 
 eg.
 
