@@ -2,6 +2,8 @@ var fs = require('fs');
 var path = require('path');
 var EventEmitter = require('events').EventEmitter;
 
+$$in.actorAliases['<'] = 'read';
+
 $$in.actors.read = function(opts, inArgs, actionArg, actorPath) {
 
   var readStream, emitter, options;
