@@ -1,6 +1,7 @@
 var fs = require('fs');
 var path = require('path');
 var EventEmitter = require('events').EventEmitter;
+var util = require('util');
 
 $$in.actorAliases['<'] = 'read';
 
