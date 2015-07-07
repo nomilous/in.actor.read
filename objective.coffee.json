@@ -1,0 +1,17 @@
+{
+  "uuid": "fc941cab-feae-40a0-969c-ecb597396c72",
+  "description": "pending description",
+  "repl": {
+    "listen": "/tmp/socket-fc941cab-feae-40a0-969c-ecb597396c72"
+  },
+  "plugins": {
+    "objective_dev": {
+      "testDir": "test",
+      "testAppend": "_test",
+      "sourceDir": "lib",
+      "runAll": true,
+      "showTrace": false,
+      "filterTrace": false
+    }
+  }
+}
