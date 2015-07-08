@@ -12,7 +12,7 @@ $$in.actors.read = function(opts, inArgs, actionArg, actorPath) {
   var isBuffer = actionArg.adapters.indexOf('buffer') >= 0;
   var file = actionArg.expansion.trim();
 
-  if (path.parse(file).root == '') {
+  if (path.resolve(file)[0] !== file[0]) {
     file = path.dirname(opts.$$caller.FileName) + path.sep + file;
   }
 
