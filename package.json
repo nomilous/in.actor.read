@@ -18,5 +18,11 @@
   "homepage": "https://github.com/nomilous/in.actor.read#readme",
   "keywords": [
     "in.actor"
-  ]
+  ],
+  "devDependencies": {
+    "should": "^7.0.1"
+  },
+  "dependencies": {
+    "when": "^3.7.3"
+  }
 }

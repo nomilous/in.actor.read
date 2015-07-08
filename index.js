@@ -2,10 +2,11 @@ var fs = require('fs');
 var path = require('path');
 var EventEmitter = require('events').EventEmitter;
 var util = require('util');
+var promise = require('when').promise;
 
 $$in.actorAliases['<'] = 'read';
 
-$$in.actors.read = function(opts, inArgs, actionArg, actorPath) {
+module.exports = $$in.actors.read = function(opts, inArgs, actionArg, actorPath) {
 
   var readStream, emitter, options;
   var isStream = actionArg.adapters.indexOf('stream') >= 0;
@@ -13,7 +14,7 @@ $$in.actors.read = function(opts, inArgs, actionArg, actorPath) {
   var file = actionArg.expansion.trim();
 
   if (path.resolve(file)[0] !== file[0]) {
-    file = path.dirname(opts.$$caller.FileName) + path.sep + file;
+    file = path.normalize(path.dirname(opts.$$caller.FileName) + path.sep + file);
   }
 
   options = util._extend({}, opts);
@@ -49,7 +50,7 @@ $$in.actors.read = function(opts, inArgs, actionArg, actorPath) {
 
   if (isBuffer) delete options.encoding;
 
-  return $$in.promise(function(resolve, reject) {
+  return promise(function(resolve, reject) {
 
     fs.readFile(file, options, function(err, data) {
       if (err) return reject(err);
