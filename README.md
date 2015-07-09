@@ -1,5 +1,6 @@
-# in.actor.read
+[![Build Status](https://travis-ci.org/nomilous/in.actor.read.svg)](https://travis-ci.org/nomilous/in.actor.read)
 
+# in.actor.read
 
 File reader for [in.](https://github.com/nomilous/in.)
 
